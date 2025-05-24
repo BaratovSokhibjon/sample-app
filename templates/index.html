@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CI/CD</title>
+    <title>Student Management - CI/CD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Message here from student ID: 12225259 for course software engineering</h1>
+    <header>
+        <nav>
+            <h1>Student Management System</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/students">Students</a></li>
+                <li><a href="/add-student">Add Student</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="hero">
+            <h2>Message from Student ID: 12225259</h2>
+            <p>Course: Software Engineering</p>
+            <p>This is a demo Flask application for CI/CD learning</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>View Students</h3>
+                <p>Browse all registered students</p>
+                <a href="/students" class="btn">View Students</a>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Add Student</h3>
+                <p>Register a new student</p>
+                <a href="/add-student" class="btn">Add Student</a>
+            </div>
+            
+            <div class="feature-card">
+                <h3>API Access</h3>
+                <p>JSON API for student data</p>
+                <a href="/api/students" class="btn">View API</a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

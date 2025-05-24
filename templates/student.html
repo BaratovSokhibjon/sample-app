@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details - CI/CD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Student Management System</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/students">Students</a></li>
+                <li><a href="/add-student">Add Student</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="student-list">
+            <h2>Student Details</h2>
+            <div class="student-card">
+                <h3>{{ student.name }}</h3>
+                <p><strong>Student ID:</strong> {{ student.id }}</p>
+                <p><strong>Course:</strong> {{ student.course }}</p>
+                <a href="/students" class="btn">Back to Students</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
